@@ -1,0 +1,17 @@
+[Unit]
+Description=Taiga room display
+After=network-online.target graphical.target status-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=maik
+WorkingDirectory=/home/maik/taiga-room-display/display-app
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/maik/.Xauthority
+ExecStart=/home/maik/taiga-room-display/display-app/venv/bin/python app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target

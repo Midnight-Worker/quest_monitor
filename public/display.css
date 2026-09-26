@@ -1,0 +1,137 @@
+:root {
+  font-family:
+    Inter,
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+  color: #f5f7f7;
+  background: #080d0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #080d0f;
+}
+
+body {
+  padding: 34px 42px;
+}
+
+.screen {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 34px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: start;
+  border-bottom: 1px solid #263238;
+  padding-bottom: 24px;
+}
+
+.eyebrow {
+  color: #ddff55;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: .18em;
+}
+
+h1 {
+  margin: 7px 0 0;
+  font-size: clamp(52px, 6vw, 106px);
+  line-height: .88;
+  letter-spacing: -.05em;
+}
+
+.right {
+  text-align: right;
+}
+
+.clock {
+  font-size: clamp(38px, 4vw, 72px);
+  font-weight: 900;
+}
+
+.status {
+  margin-top: 8px;
+  color: #8da0a6;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.status.online {
+  color: #83e38e;
+}
+
+.status.error {
+  color: #ff7171;
+}
+
+.content {
+  min-height: 0;
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.quest-card {
+  min-height: 105px;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 150px;
+  gap: 24px;
+  align-items: center;
+  padding: 18px 22px;
+  border: 1px solid #29383e;
+  border-left: 9px solid var(--status-color, #ddff55);
+  background: #10181b;
+}
+
+.number {
+  font-size: 45px;
+  color: #ddff55;
+  font-weight: 950;
+}
+
+.task-title {
+  font-size: clamp(28px, 3vw, 50px);
+  font-weight: 900;
+  line-height: 1.02;
+}
+
+.meta {
+  margin-top: 8px;
+  color: #93a4aa;
+  font-size: 16px;
+}
+
+.qr {
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  padding: 6px;
+}
+
+.qr img {
+  width: 100%;
+  height: 100%;
+}
+
+.empty {
+  color: #708087;
+  font-size: clamp(32px, 4vw, 72px);
+  text-align: center;
+  font-weight: 800;
+}
